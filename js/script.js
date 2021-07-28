@@ -10,11 +10,9 @@ const getImage = async function () {
     // console.log(images);
     selectRandomImage(images);
 };
-getImage ();
 
 
 // Display a random image from the images array
-
 const selectRandomImage = function(images) {
     const randomIndex = Math.floor (Math.random() * images.length);
     // console.log(randomIndex);
@@ -31,4 +29,6 @@ const displayImage = function (randomImage) {
     imgDiv.classList.remove("hide");
 };
 
-// addEventListener("click", button);
+button.addEventListener("click", function(){
+    getImage ();
+});
